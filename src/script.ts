@@ -1,7 +1,8 @@
 import Security from "../lib/Security";
+import scraping from "../lib/scraping";
 import { exit } from "process";
 
-const url: string = process.argv[2] || "";
+const url: string = process.argv[2] || "http://nakamura0907.html.xdomain.jp/";
 const format: string = process.argv[3] || "default";
 
 /* Validation */
@@ -13,14 +14,14 @@ if (!new Security(url).check()) {
 }
 
 /* Scraping Main Process */
-const result = "hoge";
+scraping(url);
 
 /* output */
-switch (format) {
-  case "default":
-    console.log("hoge");
-    break;
-  default:
-    console.log("huga");
-    break;
-}
+// switch (format) {
+//   case "default":
+//     console.log("hoge");
+//     break;
+//   default:
+//     console.log("huga");
+//     break;
+// }

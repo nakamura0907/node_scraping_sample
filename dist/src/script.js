@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const Security_1 = __importDefault(require("../lib/Security"));
+const scraping_1 = __importDefault(require("../lib/scraping"));
 const url = process.argv[2] || "";
 const format = process.argv[3] || "default";
 /* Validation */
@@ -12,7 +13,8 @@ if (!new Security_1.default(url).check()) {
     //   exit();
 }
 /* Scraping Main Process */
-const result = "hoge";
+const result = scraping_1.default(url, "h1");
+console.log(`result: ${result}`);
 /* output */
 switch (format) {
     case "default":

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@types/node": "^10.17.28",
+    "cheerio-httpcli": "^0.8.1",
     "typescript": "^4.0.2"
   },
   "devDependencies": {
