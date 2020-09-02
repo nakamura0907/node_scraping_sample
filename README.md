@@ -12,6 +12,9 @@
 
 - URL: 見出しを取得したいサイトの URL を入力します。
 - FORMAT(option): 出力形式を指定します。
+  ##### 指定可能オプション
+  - default(console.log)
+  - json
 
 ### Security
 
